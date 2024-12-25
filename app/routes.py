@@ -60,7 +60,7 @@ def upload():
 
             # 运行工作流
             def generate():
-                workflow_url = "http://1.14.95.70/v1/workflows/run"
+                workflow_url = "http://myserver/v1/workflows/run"
                 headers = {
                     "Authorization": "Bearer app-gGcvdsKxglvBwWBowPDvlQAg",
                     "Content-Type": "application/json"
@@ -130,7 +130,7 @@ def upload():
             return render_template('index.html', error=f"处理请求时发生错误: {str(e)}")
 
 def upload_file(file, user):
-    upload_url = "http://1.14.95.70/v1/files/upload"
+    upload_url = "http:///v1/files/upload"
     headers = {
         "Authorization": "Bearer app-gGcvdsKxglvBwWBowPDvlQAg",
     }
@@ -163,7 +163,7 @@ def upload_file(file, user):
         return None
 
 def run_workflow(file_id, user, response_mode="streaming"):
-    workflow_url = "http://1.14.95.70/v1/workflows/run"
+    workflow_url = "http://myserver/v1/workflows/run"
     headers = {
         "Authorization": "Bearer app-gGcvdsKxglvBwWBowPDvlQAg",
         "Content-Type": "application/json"
